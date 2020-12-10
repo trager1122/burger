@@ -1,4 +1,4 @@
-const connection=require('connection.js');
+const connection=require('./connection');
 
 // Helper function for SQL syntax.
 // Allows us to pass 3 values into the mySQL query.
