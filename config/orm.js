@@ -52,7 +52,7 @@ var orm={
         queryString += ") ";
     
         console.log(queryString);
-    
+       console.log('vals ', vals)
         connection.query(queryString, vals, function(err, result) {
             if (err) {
                 throw err;
@@ -63,9 +63,9 @@ var orm={
 
     //method to update the burger's information especially on whether it has been devoured
     updateOne:(table, objColVals, condition, cb)=>{
-        var queryString ="UPDATE"+ table;
+        var queryString ="UPDATE "+ table;
 
-        querystring+=" SET "
+        queryString+=" SET "
         queryString += objToSql(objColVals);
         queryString += " WHERE ";
         queryString += condition;
