@@ -2,10 +2,9 @@
 $(function() {
   $(".change-devoured").on("click", function(event) {
     var id = $(this).data("id");
-    var newState = $(this).data("newstate");
 
     var newBurgerState = {
-      devoured: newState
+      devoured: true
     };
 
     // Send the PUT request.
@@ -14,7 +13,6 @@ $(function() {
       data: newBurgerState
     }).then(
       function() {
-        console.log("changed sleep to", newState);
         // Reload the page to get the updated list
         location.reload();
       }
